@@ -1,0 +1,27 @@
+body{
+    background-color: #032584;
+    color: white;
+}
+.username{
+   text-align: center;
+}
+
+.password{
+   text-align: center;
+}
+
+.container{
+    text-align: center;
+    padding-top: 15%;
+}
+
+button{
+    color:black;
+}
+.photo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    width: 100%;
+}
