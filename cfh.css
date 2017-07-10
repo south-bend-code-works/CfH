@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  background-color: #032584;
+  /*color: white*/
+}
+
+#header {
+  color: white
+}
+
+.bed {
+  border: #032584;
+  border-style: solid;
+  border-width: thin;
+  font-size: 20pt;
+  background-color: transparent;
+}
+
+.s6 {
+  padding: 15px;
+}
