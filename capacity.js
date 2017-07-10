@@ -20,6 +20,7 @@ function init() {
 
 function check(){
   $(this).toggleClass("red");
+  // TODO Find bed status in Firebase & show on diagram
 }
 
 })();
