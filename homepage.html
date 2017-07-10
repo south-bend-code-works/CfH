@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+    <title>Center for the Homeless Availability Charting</title>
+
+  </head>
+
+  <body>
+    <div id="main-header" class="row">
+     <div class="col s12">
+       <div class="row">
+         <div id="section-title" class="col 6">
+         <h3>Center For the Homeless Availability Viewer</h3>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+     <div class="row">
+       <div class="col s12">
+         <h3>main description of website</h3>
+       </div>
+     </div>
+
+     <form class="col s10 offset-s1">
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="FirstName" type="text" class="validate">
+         <label for="FirstName">First Name</label>
+       </div>
+       <div class="row">
+          <input id= "Middle" type="text" class="validate">
+          <label for="Middle"> M.I. </label>
+        </div>
+        <div class= "row">
+          <input id= "LastName" type="text" class="validate">
+          <label for="LastName"> Last Name </label>
+        </div>
+      </div>
+    </form>
+
+    <form action="#">
+
+        <p>
+          <input type="checkbox" class="comeb"        id="comeb" />
+          <label for="conmeb">Has stayed at center for the homeless before </label>
+        </p>
+
+        <p> Gender </p>
+        <p>
+          <input name="group1" type="radio" id="gender1" />
+          <label for="gender1">female</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="gender2" />
+          <label for="gender2">male</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="gender3" />
+          <label for="gender1">other</label>
+        </p>
+
+        <p>
+          <input type="checkbox" class="checkbox" id="vet" />
+          <label for="vet"> Is a US Military Veteran </label>
+        </p>
+
+        <p> Seeking Single Housing or Accompanied by Children </p>
+        <p>
+          <input name="group1" type="radio" id="single" />
+          <label for="single">Single Housing </label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="kids" />
+          <label for="kids">Accompanied by Children</label>
+        </p>
+
+        <p>
+          <input type="checkbox" class="checkbox" id="photoid"/>
+          <label for="photoid"> Has a photo ID </label>
+        </p>
+
+        <p>
+          <input type="checkbox" class="checkbox" id="policy"/>
+          <label for="photoid"> Is willing to abide by the Center for the Homeless' drug and alchohol policy. </label>
+        </p>
+
+      <p> additional questions </p>
+    </form>
+
+    <a class="waves-effect waves-light btn">Submit</a> 
+  </body>
+
+</html>
