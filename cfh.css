@@ -1,11 +1,13 @@
 body {
   text-align: center;
   background-color: #032584;
-  /*color: white*/
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #header {
-  color: white
+  color: white;
 }
 
 .bed {
