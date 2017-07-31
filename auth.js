@@ -9,3 +9,12 @@ var uiConfig = {
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
           firebase.auth.PhoneAuthProvider.PROVIDER_ID
         ],
+        
+        var config = {
+    apiKey: "AIzaSyBCCOueSDHXoEwdjzR3FDt7hRqhZmqy1No",
+    authDomain: "center-for-the-homeless.firebaseapp.com",
+    databaseURL: "https://center-for-the-homeless.firebaseio.com",
+    projectId: "center-for-the-homeless",
+    storageBucket: "center-for-the-homeless.appspot.com",
+    messagingSenderId: "1019432978985"
+  };
