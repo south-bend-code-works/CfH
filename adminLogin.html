@@ -2,11 +2,16 @@
 <html>
     <head>
         <title>Admin login</title>
+        <!--Stylesheets-->
         <link href="adminLogin.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-        
-        <script src="https://cdn.firebase.com/libs/firebaseui/2.2.1/firebaseui.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.2.1/firebaseui.css" />
+        <!--Scripts-->
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="adminLogin.js"></script>
     </head>
     <body>
         <div class="photo">
@@ -15,14 +20,15 @@
         <div class="container">
             <h1><b>Admin Login</b></h1>
             <div class="username">
-                <input type="text" name="username" id="username">
-                <p>Username</p>
+                <input type="text" name="username" id="username" class="center-align">
+                <p><u>Email</u></p>
             </div>
             <div class="password">
-                <input type="text" name="password" id="password">
-                <p>Password</p>
+                <input type="text" name="password" id="password" class="center-align">
+                <p><u>Password</u></p>
             </div>
             <button id="login">login</button>
+            <button id="signOut">sign out</button>
         </div>       
     </body>
 </html>

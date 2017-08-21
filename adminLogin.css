@@ -16,7 +16,8 @@ body{
 }
 
 button{
-    color:black;
+    background-color: black;
+    color: white;
 }
 .photo{
     position: absolute;
