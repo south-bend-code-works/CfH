@@ -15,9 +15,47 @@
   
   function init() {
     firebase.initializeApp(config);
-    alert('it is working');
+    $('#submit').on("click", getData);
   }
   
-  
+  function getData(){
+   var firebasefname = firebase.database().ref('Form').child('Fname');
+   var firebaselname = firebase.database().ref('Form').child('Lname');
+   var firebasemname = firebase.database().ref('Form').child('Mname');
+   var firebaseGender1 = firebase.database().ref('Form').child('gen1');
+   var firebaseGender2 = firebase.database().ref('Form').child('gen2');
+   var firebaseGender3 = firebase.database().ref('Form').child('gen3');
+   var firebaseSingle = firebase.database().ref('Form').child('single');
+   var firebaseKids = firebase.database().ref('Form').child('kids');
+   var firebaseVet = firebase.database().ref('Form').child('Vet');
+   var firebasePhoto = firebase.database().ref('Form').child('photo');
+   var firebasePolicy = firebase.database().ref('Form').child('policy');
+   var firebaseComeb = firebase.database().ref('Form').child('comeb');
+   var fname = $('#FirstName').val();
+   var mname = $('#Middle').val();
+   var lname = $('#LastName').val();
+   var gen1 = $('#gender1').val();
+   var gen2 = $('#gender2').val();
+   var gen3 = $('#gender3').val();
+   var single = $('#single').val();
+   var kids = $('#kids').val();
+   var vet = $('#vet').val();
+   var photoid = $('#photoid').val();
+   var policy = $('#policy').val();
+   var comeb = $('#comeb').val();
+   
+    firebasefname.push({
+        First_Name:fname,
+      });
+    
+    firebaselname.push({
+      Last_Name:lname,
+     });
+    
+    firebasemname.push({
+      Middle_Name:mname,
+     });
+    
+  }
   
 })();
