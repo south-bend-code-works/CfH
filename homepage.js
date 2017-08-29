@@ -56,6 +56,9 @@
       Middle_Name:mname,
      });
     
+    firebaseGender1.push({
+      Male:gen1,
+    });
   }
   
 })();
