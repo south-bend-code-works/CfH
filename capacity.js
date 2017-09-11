@@ -17,7 +17,7 @@ function init() {
 
 function check(){
   $(this).toggleClass("red");
-      var ref = fireabase.database().ref("Room");
+      var ref = firebase.database().ref("Room");
   ref.once('child_added', function(snapshot){
     var data = snapshot.val();
     console.log(data);
