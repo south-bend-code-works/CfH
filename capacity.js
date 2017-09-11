@@ -13,6 +13,10 @@ function init() {
   firebase.initializeApp(config);
   // alert('it is working');
   $('.bed').click(check);
+  
+  
+  // These are Alex's suggestions...
+  getBedStatus();
 }
 
 function check(){
@@ -23,6 +27,14 @@ function check(){
     console.log(data);
     console.log("working");
   });
+}
+  
+//  These are also alex's suggestions...
+ function getBedStatus(){
+  firebase.database().ref("Room").once('value', function(snapshot){
+    var data = snapshot.val();
+    console.log(data);
+  }
 }
   
 })();
