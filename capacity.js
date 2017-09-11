@@ -17,10 +17,11 @@ function init() {
 
 function check(){
   $(this).toggleClass("red");
-      var ref = fireabse.database().ref("Room").child("Family_1");
+      var ref = fireabse.database().ref("Room/Family_1").child("room_1");
   ref.once('child_added', function(snapshot){
     var data = snapshot.val();
     console.log(data);
+    console.log("working");
     for(i = 0; i < data.length; i++){
       console.log(data); 
     }
