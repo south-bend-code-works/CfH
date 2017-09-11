@@ -12,7 +12,12 @@
 function init() {
   firebase.initializeApp(config);
   // alert('it is working');
-     var ref = fireabse.database().ref("Room");
+  $('.bed').click(check);
+}
+
+function check(){
+  $(this).toggleClass("red");
+      var ref = fireabse.database().ref("Room");
   ref.on("child_added", function(snapshot){
     var data = snapshot.val();
     console.log(data);
@@ -20,12 +25,6 @@ function init() {
       console.log(data); 
     }
   });
-  $('.bed').click(check);
-}
-
-function check(){
-  $(this).toggleClass("red");
- 
 }
   
 })();
