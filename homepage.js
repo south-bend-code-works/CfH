@@ -59,6 +59,37 @@
     firebaseGender1.push({
       Male:gen1,
     });
-  }
+    
+    firebaseGender2.push({
+      Female:gen2,
+    });
+    
+    firebaseGender3.push({
+      Other:gen3,
+    });
+    
+    firebaseSingle.push({
+      Single:single,
+    });
+    
+    firebaseKids.push({
+      Kids:kids,
+    });
+    
+    firebaseVet.push({
+      Veteran:Vet,
+    });
+    
+    firebasePhoto.push({
+      Photo:photo,
+    });
+    
+    firebasePolicy.push({
+      Policy:policy,
+    });
+    
+    firebaseComeb.push({
+      Comeb:comeb,
+    });
   
 })();
