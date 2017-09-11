@@ -22,9 +22,6 @@ function check(){
     var data = snapshot.val();
     console.log(data);
     console.log("working");
-    for(i = 0; i < data.length; i++){
-      console.log(data); 
-    }
   });
 }
   
