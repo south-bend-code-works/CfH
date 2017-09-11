@@ -15,6 +15,7 @@ function init() {
      var ref = fireabse.database().ref("Room");
   ref.on("child_added", function(snapshot){
     var data = snapshot.val();
+    console.log(data);
     for(i = 0; i < data.length; i++){
       console.log(data); 
     }
