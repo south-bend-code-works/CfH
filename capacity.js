@@ -34,7 +34,7 @@ function check(){
   firebase.database().ref("Room").once('value', function(snapshot){
     var data = snapshot.val();
     console.log(data);
-  }
+  });
 }
   
 })();
