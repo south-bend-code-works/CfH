@@ -28,6 +28,11 @@ function check(){
   firebase.database().ref("Room").once('value', function(snapshot){
     var data = snapshot.val();
     console.log(data);
+    
+    for(i = 0; i < data.length; i++){
+      console.log(data);
+    }
+    
   });
 }
   
