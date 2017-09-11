@@ -17,7 +17,7 @@ function init() {
 
 function check(){
   $(this).toggleClass("red");
-      var ref = fireabse.database().ref("Room").child();
+      var ref = fireabse.database().ref("Room").child("Family_1");
   ref.once('child_added', function(snapshot){
     var data = snapshot.val();
     console.log(data);
