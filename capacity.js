@@ -21,12 +21,6 @@ function init() {
 
 function check(){
   $(this).toggleClass("red");
-      var ref = firebase.database().ref("Room");
-  ref.once('child_added', function(snapshot){
-    var data = snapshot.val();
-    console.log(data);
-    console.log("working");
-  });
 }
   
 //  These are also alex's suggestions...
