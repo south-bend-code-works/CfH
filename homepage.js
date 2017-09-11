@@ -91,5 +91,7 @@
     firebaseComeb.push({
       Comeb:comeb,
     });
+    
+    console.log("working");
   
 }();
