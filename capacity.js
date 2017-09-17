@@ -33,6 +33,10 @@ function check(){
       console.log(data);
     }
     
+    for(var x in data){
+      console.log(data[x]);
+    }
+    
   });
 }
   
