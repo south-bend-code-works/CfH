@@ -21,7 +21,7 @@ function init() {
 
 //  These are also alex's suggestions...
  function getBedStatus(){
-  firebase.database().ref("Room/Women").once('value', function(snapshot){
+  firebase.database().ref().child("Room/Women").once('value', function(snapshot){
     var data = snapshot.val();
     // console.log(data);
 
