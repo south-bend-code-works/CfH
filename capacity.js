@@ -11,33 +11,50 @@
 
 function init() {
   firebase.initializeApp(config);
-  // alert('it is working');
-  $('.bed').click(check);
-  
-  
+  alert('it is working');
+
+
   // These are Alex's suggestions...
   getBedStatus();
 }
 
-function check(){
-  $(this).toggleClass("red");
-}
-  
+
 //  These are also alex's suggestions...
  function getBedStatus(){
   firebase.database().ref("Room").once('value', function(snapshot){
     var data = snapshot.val();
     console.log(data);
-    
+
     for(i = 0; i < data.length; i++){
       console.log(data);
     }
-    
+
     for(var x in data){
       console.log(data[x]);
     }
-    
+
   });
+  initChangeColor();
 }
-  
+
+function initChangeColor() {
+  console.log('We are here.');
+  if (firebase.database().ref("Room").val('True')) {
+    $('.bed').css('background-color', 'red');
+  } else {
+    $('.bed').css('background-color', '#032584')
+  }
+}
+
+
+function click() {
+  $('.bed').click(check);
+}
+
+function check(){
+  $(this).toggleClass("red");
+}
+
+
+
 })();
