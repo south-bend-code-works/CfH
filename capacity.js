@@ -34,17 +34,22 @@ function init() {
     }
 
   });
-  initChangeColor();
+  // initChangeColor();
 }
 
-function initChangeColor() {
-  console.log('We are here.');
-  if (firebase.database().ref("Room").val('true')) {
-    $('.bed').css('background-color', 'red');
-  } else {
-    $('.bed').css('background-color', '#032584')
-  }
+function callRoom(){
+  var print = snapshot.val('room_1');
+  console.log(print);
 }
+
+// function initChangeColor() {
+//   console.log('We are here.');
+//   if (firebase.database().ref("Room").val('true')) {
+//     $('.bed').css('background-color', 'red');
+//   } else {
+//     $('.bed').css('background-color', '#032584')
+//   }
+// }
 
 
 function click() {
