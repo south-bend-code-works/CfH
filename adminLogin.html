@@ -7,10 +7,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
         <!--Scripts-->
         <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-        <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script src="adminLogin.js"></script>
     </head>
     <body>
@@ -18,16 +17,22 @@
             <img src="https://static.wixstatic.com/media/0e582e_bc878b499492445eb76cb2ad1236157a~mv2.png/v1/fill/w_278,h_127,al_c,usm_0.66_1.00_0.01/0e582e_bc878b499492445eb76cb2ad1236157a~mv2.png"/>
         </div>
         <div class="container">
-            <h1><b>Admin Login</b></h1>
-            <div class="username" class="input-field col s12" class="row">
-                <input type="text" name="username" id="username" class="center-align">
-                <label for="username">Email</label>
-                <!--<p class='emailpassword'><u>Email</u></p> -->
+            
+            <div class="row">
+                <h1>Admin Login</h1>
             </div>
-            <div class="password" class="input-field col s12" class="row">
-                <input type="password" name="password" id="password" class="center-align">
-                <label for="password">Password</label>
-               <!-- <p class='emailpassword'><u>Password</u></p> -->
+            
+            <div class="row">
+                <div class="input-field col s12 username">
+                  <input type="text" name="username" id="username" class="center-align validate">
+                  <label for="username">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 password">
+                  <input id="password" type="email" class="center-align validate">
+                  <label for="password">Password</label>
+                </div>
             </div>
             <a class="waves-effect waves-light btn" id="login">Login</a>
     </body>
