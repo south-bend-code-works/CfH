@@ -39,7 +39,7 @@ function init() {
 
 function initChangeColor() {
   console.log('We are here.');
-  if (firebase.database().ref("Room").val('True')) {
+  if (firebase.database().ref("Room").val('true')) {
     $('.bed').css('background-color', 'red');
   } else {
     $('.bed').css('background-color', '#032584')
