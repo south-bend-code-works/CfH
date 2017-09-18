@@ -23,11 +23,11 @@ function init() {
  function getBedStatus(){
   firebase.database().ref("Room").once('value', function(snapshot){
     var data = snapshot.val();
-    console.log(data);
+    // console.log(data);
 
-    for(i = 0; i < data.length; i++){
-      console.log(data);
-    }
+    // for(i = 0; i < data.length; i++){
+    //   console.log(data);
+    // }
 
     for(var x in data){
       console.log(data[x]);
