@@ -11,7 +11,7 @@
 
 function init() {
   firebase.initializeApp(config);
-  console.log('it is working');
+  alert('it is working');
 
 
   // These are Alex's suggestions...
@@ -32,12 +32,14 @@ function init() {
     for(var x in data){
       console.log(data[x]);
     }
+    callRoom();
 
   });
+  // initChangeColor();
 }
 
 function callRoom(){
-  var print = snapshot.val('room_1');
+  var print = snapshot.val(data, 'room_1');
   console.log(print);
 }
 
@@ -51,13 +53,14 @@ function callRoom(){
 // }
 
 
-//function click() {
-//  $('.bed').click(check);
-//}
-//
-//function check(){
-//  $(this).toggleClass("red");
-//}
+function click() {
+  $('.bed').click(check);
+}
+
+function check(){
+  $(this).toggleClass("red");
+}
+
 
 
 })();
