@@ -11,7 +11,7 @@
 
 function init() {
   firebase.initializeApp(config);
-  alert('it is working');
+  console.log('it is working');
 
 
   // These are Alex's suggestions...
@@ -34,7 +34,6 @@ function init() {
     }
 
   });
-  // initChangeColor();
 }
 
 function callRoom(){
@@ -52,14 +51,13 @@ function callRoom(){
 // }
 
 
-function click() {
-  $('.bed').click(check);
-}
-
-function check(){
-  $(this).toggleClass("red");
-}
-
+//function click() {
+//  $('.bed').click(check);
+//}
+//
+//function check(){
+//  $(this).toggleClass("red");
+//}
 
 
 })();
