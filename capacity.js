@@ -11,7 +11,7 @@
 
 function init() {
   firebase.initializeApp(config);
-  alert('it is working');
+  console.log('it is working');
 
 
   // These are Alex's suggestions...
@@ -20,29 +20,34 @@ function init() {
 
 
 //  These are also alex's suggestions...
- function getBedStatus(){
+function getBedStatus(){
+  firebase.database().ref().child("Room/Family");
+  firebase.database().ref().child("Room/Family");
+  firebase.database().ref().child("Room/Family");
+  firebase.database().ref().child("Room/Family");
+  firebase.database().ref().child("Room/Men");
   firebase.database().ref().child("Room/Women").once('value', function(snapshot){
     var data = snapshot.val();
-    // console.log(data);
+    console.log(data);
 
-    // for(i = 0; i < data.length; i++){
-    //   console.log(data);
-    // }
-
-    for(var x in data){
-      console.log(data[x]);
-    }
-    callRoom();
-
-  });
+  //   for(i = 0; i < data.length; i++){
+  //     console.log(data);
+  //   }
+  //
+  //   for(var x in data){
+  //     console.log(data[x]);
+  //   }
+  //   callRoom();
+  //
+  // });
   // initChangeColor();
 }
 
-function callRoom(){
-  var print = snapshot.val(data, 'room_1');
-  console.log(print);
-}
-
+// function callRoom(){
+//   var print = snapshot.val(data, 'room_1');
+//   console.log(print);
+// }
+//
 // function initChangeColor() {
 //   console.log('We are here.');
 //   if (firebase.database().ref("Room").val('true')) {
@@ -51,15 +56,15 @@ function callRoom(){
 //     $('.bed').css('background-color', '#032584')
 //   }
 // }
-
-
-function click() {
-  $('.bed').click(check);
-}
-
-function check(){
-  $(this).toggleClass("red");
-}
+//
+//
+// function click() {
+//   $('.bed').click(check);
+// }
+//
+// function check(){
+//   $(this).toggleClass("red");
+// }
 
 
 
