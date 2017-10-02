@@ -48,8 +48,12 @@ function callRoom(){
   console.log(print);
 }
 
-function initChangeColor() {
+function initChangeColor(){
   console.log('We are here.');
+  $('.bed').click(ChangeColor);
+}
+
+function ChangeColor() {
   if (firebase.database().ref("Room").val('true')) {
     $('.bed').css('background-color', 'red');
   } else {
