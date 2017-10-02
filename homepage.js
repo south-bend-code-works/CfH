@@ -19,18 +19,6 @@
   }
   
   function getData(){
-   var firebasefname = firebase.database().ref('Form').child('Fname');
-   var firebaselname = firebase.database().ref('Form').child('Lname');
-   var firebasemname = firebase.database().ref('Form').child('Mname');
-   var firebaseGender1 = firebase.database().ref('Form').child('gen1');
-   var firebaseGender2 = firebase.database().ref('Form').child('gen2');
-   var firebaseGender3 = firebase.database().ref('Form').child('gen3');
-   var firebaseSingle = firebase.database().ref('Form').child('single');
-   var firebaseKids = firebase.database().ref('Form').child('kids');
-   var firebaseVet = firebase.database().ref('Form').child('Vet');
-   var firebasePhoto = firebase.database().ref('Form').child('photo');
-   var firebasePolicy = firebase.database().ref('Form').child('policy');
-   var firebaseComeb = firebase.database().ref('Form').child('comeb');
    var fname = $('#firstName').val();
    var mname = $('#middle').val();
    var lname = $('#lastName').val();
@@ -44,53 +32,25 @@
    var policy = $('#policy').val();
    var comeb = $('#comeb').val();
    
-    firebasefname.set({
-        First_Name:fname,
-      });
-    
-    firebaselname.set({
-      Last_Name:lname,
-     });
-    
-    firebasemname.set({
-      Middle_Name:mname,
-     });
-    
-    firebaseGender1.set({
-      Male:gen1,
-    });
-    
-    firebaseGender2.set({
-      Female:gen2,
-    });
-    
-    firebaseGender3.set({
-      Other:gen3,
-    });
-    
-    firebaseSingle.set({
-      Single:single,
-    });
-    
-    firebaseKids.set({
-      Kids:kids,
-    });
-    
-    firebaseVet.set({
-      Veteran:Vet,
-    });
-    
-    firebasePhoto.set({
-      Photo:photo,
-    });
-    
-    firebasePolicy.set({
-      Policy:policy,
-    });
-    
-    firebaseComeb.set({
-      Comeb:comeb,
-    });
+  var data = {
+    fname:fname,
+    mname:mname,
+    lname:lname,
+    gen1:gen1,
+    gen2:gen2,
+    gen3:gen3,
+    single:single,
+    kids:kids,
+    vet:vet,
+    photoid:photoid,
+    policy:policy,
+    comeb:comeb,
+  }
+  
+  var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
+  var updates = {};
+  updates['/Applicant/' + newApplicantKey] = data;
+  firebase.database().ref().update(updates);
     
     console.log("working");
   }
