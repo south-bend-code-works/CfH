@@ -44,51 +44,51 @@
    var policy = $('#policy').val();
    var comeb = $('#comeb').val();
    
-    firebasefname.push({
+    firebasefname.set({
         First_Name:fname,
       });
     
-    firebaselname.push({
+    firebaselname.set({
       Last_Name:lname,
      });
     
-    firebasemname.push({
+    firebasemname.set({
       Middle_Name:mname,
      });
     
-    firebaseGender1.push({
+    firebaseGender1.set({
       Male:gen1,
     });
     
-    firebaseGender2.push({
+    firebaseGender2.set({
       Female:gen2,
     });
     
-    firebaseGender3.push({
+    firebaseGender3.set({
       Other:gen3,
     });
     
-    firebaseSingle.push({
+    firebaseSingle.set({
       Single:single,
     });
     
-    firebaseKids.push({
+    firebaseKids.set({
       Kids:kids,
     });
     
-    firebaseVet.push({
+    firebaseVet.set({
       Veteran:Vet,
     });
     
-    firebasePhoto.push({
+    firebasePhoto.set({
       Photo:photo,
     });
     
-    firebasePolicy.push({
+    firebasePolicy.set({
       Policy:policy,
     });
     
-    firebaseComeb.push({
+    firebaseComeb.set({
       Comeb:comeb,
     });
     
