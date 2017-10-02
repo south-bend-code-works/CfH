@@ -1,4 +1,4 @@
-(function() {
+(function(){
   $(document).ready(init);
   
 // Initialize Firebase
@@ -93,5 +93,5 @@
     });
     
     console.log("working");
-  
-)}();
+  }
+})();
