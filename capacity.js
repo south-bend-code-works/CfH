@@ -41,7 +41,7 @@ function getBedStatus(){
 
   });
   initChangeColor();
-}
+)}
 
 function callRoom(){
   var print = snapshot.val(data, 'room_1');
