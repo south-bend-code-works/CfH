@@ -10,7 +10,7 @@
     storageBucket: "center-for-the-homeless.appspot.com",
     messagingSenderId: "1019432978985"
   };*/
-  firebase.initializeApp(config);
+  /*firebase.initializeApp(config);*/
   
   
   function init() {
