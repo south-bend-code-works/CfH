@@ -1,4 +1,4 @@
-var uiConfig = {
+/*var uiConfig = {
         signInSuccessUrl: '<url-to-redirect-to-on-success>',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
@@ -20,3 +20,4 @@ var uiConfig = {
   };
 
 firebase.initializeApp(config);
+*/
