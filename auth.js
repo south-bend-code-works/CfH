@@ -10,7 +10,7 @@ var uiConfig = {
           firebase.auth.PhoneAuthProvider.PROVIDER_ID
         ],
         
-        var config = {
+     var config = {
     apiKey: "AIzaSyBCCOueSDHXoEwdjzR3FDt7hRqhZmqy1No",
     authDomain: "center-for-the-homeless.firebaseapp.com",
     databaseURL: "https://center-for-the-homeless.firebaseio.com",
@@ -18,3 +18,5 @@ var uiConfig = {
     storageBucket: "center-for-the-homeless.appspot.com",
     messagingSenderId: "1019432978985"
   };
+
+firebase.initializeApp(config);
