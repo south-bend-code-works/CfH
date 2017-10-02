@@ -31,9 +31,9 @@
    var firebasePhoto = firebase.database().ref('Form').child('photo');
    var firebasePolicy = firebase.database().ref('Form').child('policy');
    var firebaseComeb = firebase.database().ref('Form').child('comeb');
-   var fname = $('#FirstName').val();
-   var mname = $('#Middle').val();
-   var lname = $('#LastName').val();
+   var fname = $('#firstName').val();
+   var mname = $('#middle').val();
+   var lname = $('#lastName').val();
    var gen1 = $('#gender1').val();
    var gen2 = $('#gender2').val();
    var gen3 = $('#gender3').val();
