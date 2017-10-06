@@ -20,8 +20,8 @@
    var fname = $('#firstName').val();
    var mname = $('#middle').val();
    var lname = $('#lastName').val();
-   var gender = $('input[name='group1']:checked').val();
-   var housing = $('input[name='group2']:checked').val();
+   var gender = $("input[name='group1']:checked").val();
+   var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
    var vet = $('#vet').val();
