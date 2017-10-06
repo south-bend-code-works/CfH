@@ -20,9 +20,8 @@
    var fname = $('#firstName').val();
    var mname = $('#middle').val();
    var lname = $('#lastName').val();
-   var gen1 = $('#gender1').val();
-   var gen2 = $('#gender2').val();
-   var gen3 = $('#gender3').val();
+   var gender = $('.gender:checked').val();
+   var housing = $('.housing:checked').val();
    var single = $('#single').val();
    var kids = $('#kids').val();
    var vet = $('#vet').val();
@@ -34,9 +33,8 @@
     fname:fname,
     mname:mname,
     lname:lname,
-    gen1:gen1,
-    gen2:gen2,
-    gen3:gen3,
+    gender:gender,
+    housing:housing,
     single:single,
     kids:kids,
     vet:vet,
