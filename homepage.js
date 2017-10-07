@@ -24,7 +24,7 @@
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
-   var checkedValues = $("checkbox[name='check']:checked").val();
+   var checkedValues = $('.check:checked').val();
    
   var data = {
     fname:fname,
