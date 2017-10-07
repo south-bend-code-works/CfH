@@ -24,28 +24,10 @@
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
-   if($('#policy:checked')){
-     var policy = $('#policy').val();
-   }else{
-     var policy = "false";
-   }
-   if($('#photoid:checked')){
-     var photoId = $('#photoid').val();
-   }else{
-     var photoId = "false";
-   }
-   if($('#comeb:checked')){
-     var comeb = $('#comeb').val();
-   }else{
-     var comeb = "false"
-     }
-   if($('#vet:checked')){
-     var vet= $('#vet').val();
-   }else{
-     var vet = "false";
-  }
-   
-  var data = {
+   var checkedValues = $("input[name='additional']:checked").val();
+   console.log(checkedValues);
+  
+  /*var data = {
     fname:fname,
     mname:mname,
     lname:lname,
@@ -53,16 +35,12 @@
     housing:housing,
     single:single,
     kids:kids,
-    policy:policy,
-    photoId:photoId,
-    comeb:comeb,
-    vet:vet,
   }
   
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
   var updates = {};
   updates['/Applicant/' + newApplicantKey] = data;
-  firebase.database().ref().update(updates);
+  firebase.database().ref().update(updates);*/
     
     console.log("working");
   }
