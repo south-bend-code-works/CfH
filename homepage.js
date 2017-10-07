@@ -24,10 +24,8 @@
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
-   var vet = $('#vet').val();
-   var photoid = $('#photoid').val();
-   var policy = $('#policy').val();
-   var comeb = $('#comeb').val();
+   var checkedValues = $('.checkbox:checked').val();
+   var comeb = $('.comeb:checked').val();
    
   var data = {
     fname:fname,
@@ -37,9 +35,7 @@
     housing:housing,
     single:single,
     kids:kids,
-    vet:vet,
-    photoid:photoid,
-    policy:policy,
+    checkedValues:checkedValues,
     comeb:comeb,
   }
   
