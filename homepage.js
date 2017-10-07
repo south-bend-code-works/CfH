@@ -24,8 +24,7 @@
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
-   var checkedValues = $('.checkbox:checked').val();
-   var comeb = $('.comeb:checked').val();
+   var checkedValues = $("checkbox[name='check']:checked").val();
    
   var data = {
     fname:fname,
@@ -36,7 +35,6 @@
     single:single,
     kids:kids,
     checkedValues:checkedValues,
-    comeb:comeb,
   }
   
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
