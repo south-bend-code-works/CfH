@@ -26,16 +26,24 @@
    var kids = $('#kids').val();
    if($('#policy:checked')){
      var policy = $('#policy').val();
+   }else{
+     var policy = "false";
    }
    if($('#photoid:checked')){
      var photoId = $('#photoid').val();
+   }else{
+     var photoId = "false";
    }
    if($('#comeb:checked')){
      var comeb = $('#comeb').val();
-   }
+   }else{
+     var comeb = "false"
+     }
    if($('#vet:checked')){
      var vet= $('#vet').val();
-   }
+   }else{
+     var vet = "false";
+  }
    
   var data = {
     fname:fname,
