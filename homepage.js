@@ -28,7 +28,6 @@
    var hasId = $('#photoid').is(":checked");
    var policy = $('#policy').is(":checked");
    var comeb = $('#comeb').is(":checked");
-   console.log(checkedValues);
   
   var data = {
     fname:fname,
