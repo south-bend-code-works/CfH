@@ -24,7 +24,10 @@
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
    var kids = $('#kids').val();
-   var checkedValues = $("input[name='additional']:checked").val();
+   var vet = $('#vet').is(":checked");
+   var hasId = $('#photoid').is(":checked");
+   var policy = $('#policy').is(":checked");
+   var comeb = $('#comeb').is(":checked");
    console.log(checkedValues);
   
   var data = {
@@ -35,6 +38,10 @@
     housing:housing,
     single:single,
     kids:kids,
+    vet:vet,
+    hasId:hasId,
+    policy:policy,
+    comeb:comeb,
   }
   
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
