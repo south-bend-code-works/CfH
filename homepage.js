@@ -27,7 +27,7 @@
    var checkedValues = $("input[name='additional']:checked").val();
    console.log(checkedValues);
   
-  /*var data = {
+  var data = {
     fname:fname,
     mname:mname,
     lname:lname,
@@ -40,7 +40,7 @@
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
   var updates = {};
   updates['/Applicant/' + newApplicantKey] = data;
-  firebase.database().ref().update(updates);*/
+  firebase.database().ref().update(updates);
     
     console.log("working");
   }
