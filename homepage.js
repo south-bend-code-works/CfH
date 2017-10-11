@@ -14,6 +14,7 @@
   function init() {
     firebase.initializeApp(config);
     $('#submit').on("click", getData);
+    $('#logOut').on("click", logOut);
   }
   
   function getData(){
@@ -49,5 +50,10 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
+  }
+  
+function logOut(){
+  firebase.auth().signOut();
+  location.replace("adminLogin.html");
   }
 })();
