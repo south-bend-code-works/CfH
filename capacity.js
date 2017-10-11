@@ -18,6 +18,10 @@ function init() {
   getBedStatus();
 }
 
+function logOut(){
+  firebase.auth().signOut();
+  location.replace("adminLogin.html");
+}
 
 //  These are also alex's suggestions...
 function getBedStatus(){
@@ -69,9 +73,5 @@ function check(){
   $(this).toggleClass("red");
 }
 
-function logOut(){
-  firebase.auth().signOut();
-  location.replace("adminLogin.html");
-}
 
 })();
