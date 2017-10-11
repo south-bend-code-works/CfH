@@ -12,7 +12,7 @@
 function init() {
   firebase.initializeApp(config);
   console.log('it is working');
-
+  $('#logOut').on('click', logOut);
 
   // These are Alex's suggestions...
   getBedStatus();
@@ -69,6 +69,9 @@ function check(){
   $(this).toggleClass("red");
 }
 
-
+function logOut(){
+  firebase.auth().signOut();
+  location.replace("adminLogin.html");
+}
 
 })();
