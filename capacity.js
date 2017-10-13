@@ -1,5 +1,7 @@
 (function() {
+
   $(document).ready(init);
+
   var config = {
     apiKey: "AIzaSyBCCOueSDHXoEwdjzR3FDt7hRqhZmqy1No",
     authDomain: "center-for-the-homeless.firebaseapp.com",
@@ -11,67 +13,150 @@
 
 function init() {
   firebase.initializeApp(config);
-  console.log('it is working');
-  $('#logOut').on('click', logOut);
+  $("#women").on('click', '.bed',initChangeColor);
+  $("#men").on('click', '.bed',ChangeColor);
 
-  // These are Alex's suggestions...
   getBedStatus();
 }
 
-function logOut(){
-  firebase.auth().signOut();
-  location.replace("adminLogin.html");
-}
 
-//  These are also alex's suggestions...
 function getBedStatus(){
-  firebase.database().ref().child("Room/Family_1");
-  firebase.database().ref().child("Room/Family_2");
-  firebase.database().ref().child("Room/Family_3");
-  firebase.database().ref().child("Room/Family_4");
-  firebase.database().ref().child("Room/Men");
-  firebase.database().ref().child("Room/Women").once('value', function(snapshot){
-    var data = snapshot.val();
-    console.log(data);
 
-    for(i = 0; i < data.length; i++){
-      console.log(data);
+  // Womens
+  firebase.database().ref().child("Room/Women").on('value', function(snapshot){
+    $('#women').empty();
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r].available;
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#women').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#women').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
     }
-
-    for(var x in data){
-      console.log(data[x]);
-    }
-    callRoom();
-
   });
-  initChangeColor();
-}
 
-function callRoom(){
-  var print = snapshot.val(data, 'room_1');
-  console.log(print);
+  // Mens
+  firebase.database().ref().child("Room/Men").on('value', function(snapshot){
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r];
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#men').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#men').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
+    }
+  });
+
+  // Family 1
+  firebase.database().ref().child("Room/Family_1").on('value', function(snapshot){
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r];
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#fam_1').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#fam_1').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
+    }
+  });
+
+  // Family 2
+  firebase.database().ref().child("Room/Family_2").on('value', function(snapshot){
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r];
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#fam_2').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#fam_2').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
+    }
+  });
+
+  // Family 3
+  firebase.database().ref().child("Room/Family_3").on('value', function(snapshot){
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r];
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#fam_3').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#fam_3').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
+    }
+  });
+
+  // Family 4
+  firebase.database().ref().child("Room/Family_4").on('value', function(snapshot){
+    var room = snapshot.val();
+
+    for(var r in room){
+      var roomAvail = room[r];
+      var roomNum = r;
+      if(roomAvail === true){
+        $('#fam_4').append("<div class='col s3 bed #032584'>" + r + "</div>")
+      } else {
+        $('#fam_4').append("<div class='col s3 bed red'>" + r + "</div>")
+      }
+    }
+  });
+
 }
+// end of function getBedStatus
+
 
 function initChangeColor(){
-  console.log('We are here.');
-  $('.bed').click(ChangeColor);
-}
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Women/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Women/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Women/"+temp).update(newState);
+    }
+  });
 
-function ChangeColor() {
-  if (firebase.database().ref("Room").val('true')) {
-    $('.bed').css('background-color', 'red');
-  } else {
-    $('.bed').css('background-color', '#032584')
-  }
 }
+// close to initChangeColor
 
-// function click() {
-//   $('.bed').click(check);
-// }
+function ChangeColor(){
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Men/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Men/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Men/"+temp).update(newState);
+    }
+  });
 
-function check(){
-  $(this).toggleClass("red");
 }
+// close to initChangeColor
+
 
 
 })();
