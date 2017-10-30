@@ -21,6 +21,7 @@
    var fname = $('#firstName').val();
    var mname = $('#middle').val();
    var lname = $('#lastName').val();
+   var dob = $('#birth').val();
    var gender = $("input[name='group1']:checked").val();
    var housing = $("input[name='group2']:checked").val();
    var single = $('#single').val();
@@ -34,6 +35,7 @@
     fname:fname,
     mname:mname,
     lname:lname,
+    dob:dob,
     gender:gender,
     housing:housing,
     single:single,
