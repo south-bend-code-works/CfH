@@ -31,7 +31,8 @@
    var policy = $('#policy').is(":checked");
    var comeb = $('#comeb').is(":checked");
    var dt = new Date('YYYY-MM-DDTHH:MM:SSZ');
-  
+   console.log(dt);
+    
   var data = {
     fname:fname,
     mname:mname,
