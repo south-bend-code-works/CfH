@@ -30,6 +30,7 @@
    var hasId = $('#photoid').is(":checked");
    var policy = $('#policy').is(":checked");
    var comeb = $('#comeb').is(":checked");
+   var dt = new Date(month, date, year, hour, minute, milliseconds);
   
   var data = {
     fname:fname,
@@ -44,6 +45,7 @@
     hasId:hasId,
     policy:policy,
     comeb:comeb,
+    dt:dt,
   }
   
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
