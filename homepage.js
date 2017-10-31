@@ -30,7 +30,7 @@
    var hasId = $('#photoid').is(":checked");
    var policy = $('#policy').is(":checked");
    var comeb = $('#comeb').is(":checked");
-   var date = Date.now();
+   var date = Date.getDate();
    console.log(date);
    var dt = new Date('YYYY-MM-DDTHH:MM:SSZ');
    console.log(dt);
