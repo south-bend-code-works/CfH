@@ -17,6 +17,7 @@ function getData(){
   var ref = firebase.database().ref("Applicant");
   ref.on("child_added", function(snapshot){
     var data = snapshot.val();
+    console.log(data);
     var fname = data.fname;
     var mname = data.mname;
     var lname = data.lname;
@@ -111,6 +112,7 @@ function getData(){
       var comebElement = document.createElement("p");
       comebElement.textContent = comeb;
       applicant.appendChild(comebElement);
+      console.log(applicant);
       
       document.getElementById("infoDisplay").appendChild("applicant");
     }
