@@ -56,13 +56,15 @@
     dt:dt,
   }
   
+  console.log(data);
+  
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
   var updates = {};
   updates['/Applicant/' + newApplicantKey] = data;
   firebase.database().ref().update(updates);
     
     console.log("working");
-    changeLocation(fname,lname);
+    //changeLocation(fname,lname);
   }
   
 function logOut(){
