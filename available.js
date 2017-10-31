@@ -35,14 +35,14 @@ function getData(){
     function showData(){
       //Div
       var applicant = document.createElement("div");
-      $(applicant).css("margin-top", "15px");
-      $(applicant).css("text-align", "center");
       //First Name
       var fnameHeader = document.createElement("h2");
       fnameHeader.textContent = "First Name";
+      $(fnameHeader).css("text-align", "left");
       applicant.appendChild(fnameHeader);
       var fnameElement = document.createElement("h4");
       fnameElement.textContent = fname;
+      $(fnameElement).css("text-align", "left");
       applicant.appendChild(fnameElement);
       //Middle Initial
       var mnameHeader = document.createElement("h2");
@@ -118,6 +118,8 @@ function getData(){
       comebElement.textContent = comeb;
       applicant.appendChild(comebElement);
       console.log(applicant);
+      $(applicant).css("margin-top", "15px");
+      $(applicant).css("text-align", "left");
       
       var infoDiv = document.getElementById("div");
       infoDiv.appendChild(applicant);
