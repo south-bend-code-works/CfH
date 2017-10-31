@@ -24,7 +24,6 @@
    var dob = $('#birth').val();
    var gender = $("input[name='group1']:checked").val();
    var housing = $("input[name='group2']:checked").val();
-   var single = $('#single').val();
    var kids = $('#kids').val();
    var vet = $('#vet').is(":checked");
    var hasId = $('#photoid').is(":checked");
@@ -47,7 +46,6 @@
     dob:dob,
     gender:gender,
     housing:housing,
-    single:single,
     kids:kids,
     vet:vet,
     hasId:hasId,
