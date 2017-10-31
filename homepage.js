@@ -68,4 +68,6 @@ function logOut(){
   firebase.auth().signOut();
   location.replace("adminLogin.html");
   }
+  
+  location.replace("available.html?id=" + fname + "-" + lname);
 })();
