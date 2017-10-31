@@ -64,15 +64,11 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
-    setTimeout(changeLocation(fname,lname), 3000);
+    setTimeout(function changeLocation(fname,lname){location.replace("available.html?id=" + fname + "-" + lname);}, 3000);
   }
   
 function logOut(){
   firebase.auth().signOut();
   location.replace("adminLogin.html");
-}
- 
-function changeLocation(fname,lname){
-  location.replace("available.html?id=" + fname + "-" + lname);
 }
 })();
