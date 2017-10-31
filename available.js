@@ -35,81 +35,86 @@ function getData(){
     function showData(){
       //Div
       var applicant = document.createElement("div");
+      $(applicant).css("margin-top", "15px");
+      $(applicant).css("text-align", "center");
       //First Name
       var fnameHeader = document.createElement("h2");
       fnameHeader.textContent = "First Name";
       applicant.appendChild(fnameHeader);
-      var fnameElement = document.createElement("p");
+      var fnameElement = document.createElement("h4");
       fnameElement.textContent = fname;
       applicant.appendChild(fnameElement);
       //Middle Initial
       var mnameHeader = document.createElement("h2");
       mnameHeader.textContent = "Middle Initial";
       applicant.appendChild(mnameHeader);
-      var mnameElement = document.createElement("p");
+      var mnameElement = document.createElement("h4);
       mnameElement.textContent = mname;
       applicant.appendChild(mnameElement);
       //Last Name
       var lnameHeader = document.createElement("h2");
       lnameHeader.textContent = "Last Name";
       applicant.appendChild(lnameHeader);
-      var lnameElement = document.createElement("p");
+      var lnameElement = document.createElement("h4");
       lnameElement.textContent = lname;
       applicant.appendChild(lnameElement);
       //DOB
       var dobHeader = document.createElement("h2");
       dobHeader.textContent = "DOB";
       applicant.appendChild(dobHeader);
-      var dobElement = document.createElement("p");
+      var dobElement = document.createElement("h4");
       dobElement.textContent = dob;
       applicant.appendChild(dobElement);
       //Gender
       var genderHeader = document.createElement("h2");
       genderHeader.textContent = "Gender";
       applicant.appendChild(genderHeader);
-      var genderElement = document.createElement("p");
+      var genderElement = document.createElement("h4");
       genderElement.textContent = gender;
       applicant.appendChild(genderElement);
       //Housing: Single
       var singleHeader = document.createElement("h2");
       singleHeader.textContent = "Looking for Single Housing";
       applicant.appendChild(singleHeader);
-      var singleElement = document.createElement("p");
+      var singleElement = document.createElement("h4");
       singleElement.textContent = single;
       applicant.appendChild(singleElement);
       //Housing: withChildren
       var withChildrenHeader = document.createElement("h2");
       withChildrenHeader.textContent = "Looking for Housing with Children";
       applicant.appendChild(withChildrenHeader);
-      var withChildrenElement = document.createElement("p");
+      var withChildrenElement = document.createElement("h4");
       withChildrenElement.textContent = kids;
       applicant.appendChild(withChildrenElement);
       //Vet
       var vetHeader = document.createElement("h2");
       vetHeader.textContent = "Is a Vet";
       applicant.appendChild(vetHeader);
-      var vetElement = document.createElement("p");
+      var vetElement = document.createElement("h4");
       vetElement.textContent = vet;
       applicant.appendChild(vetElement);
       //Has an ID
       var idHeader = document.createElement("h2");
       idHeader.textContent = "Has Photo ID";
       applicant.appendChild(idHeader);
-      var idElement = document.createElement("p");
+      var idElement = document.createElement("h4");
       idElement.textContent = hasId;
       applicant.appendChild(idElement);
       //Policy
       var policyHeader = document.createElement("h2");
       policyHeader.textContent = "Willing to abide by the Drug and alchohol policy of the Center fo the Homeless";
       applicant.appendChild(policyHeader);
-      var policyElement = document.createElement("p");
+      var policyElement = document.createElement("h4");
+      if(policy === "false"){
+         $(policyElement).css("color", "red");
+      }
       policyElement.textContent = policy;
       applicant.appendChild(policyElement);
       //Come before
       var comebHeader = document.createElement("h2");
       comebHeader.textContent = "Has come before";
       applicant.appendChild(comebHeader);
-      var comebElement = document.createElement("p");
+      var comebElement = document.createElement("h4");
       comebElement.textContent = comeb;
       applicant.appendChild(comebElement);
       console.log(applicant);
