@@ -1,12 +1,20 @@
 (function(){
   $(document).ready(init);
-  
+  var config = {
+    apiKey: "AIzaSyBCCOueSDHXoEwdjzR3FDt7hRqhZmqy1No",
+    authDomain: "center-for-the-homeless.firebaseapp.com",
+    databaseURL: "https://center-for-the-homeless.firebaseio.com",
+    projectId: "center-for-the-homeless",
+    storageBucket: "center-for-the-homeless.appspot.com",
+    messagingSenderId: "1019432978985"
+  };
 function init(){
+  firebase.initializeApp(config);
   getData();
 }
 
 function getData(){
-  var ref = firebase.database().ref("applicant");
+  var ref = firebase.database().ref("Applicant");
   ref.on("child_added", function(snapshot){
     var data = snapshot.val();
     var fname = data.fname;
