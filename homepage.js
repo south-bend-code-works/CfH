@@ -34,7 +34,7 @@
    var dd = today.getDate();
    var mm = today.getMonth()+1;
    var yyyy = today.getFullYear();
-   console.log(mm:dd:yyyy);
+   console.log(mm + ":" + dd + ":" + yyyy);
    var dt = new Date('YYYY-MM-DDTHH:MM:SSZ');
    console.log(dt);
     
