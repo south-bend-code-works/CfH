@@ -17,7 +17,7 @@
     $('#logOut').on("click", logOut);
   }
   
-  function getData(){
+  function getData(fname,lname){
    var fname = $('#firstName').val();
    var mname = $('#middle').val();
    var lname = $('#lastName').val();
@@ -62,12 +62,15 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
+    changeLocation();
   }
   
 function logOut(){
   firebase.auth().signOut();
   location.replace("adminLogin.html");
-  }
-  
+}
+ 
+function changeLocation(fname,lname){
   location.replace("available.html?id=" + fname + "-" + lname);
+}
 })();
