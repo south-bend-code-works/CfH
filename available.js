@@ -114,7 +114,8 @@ function getData(){
       applicant.appendChild(comebElement);
       console.log(applicant);
       
-      document.getElementById("infoDisplay").appendChild("applicant");
+      var infoDiv = document.getElementById('infoDisplay');
+      infoDiv.appendChild(applicant);
     }
   });
 }
