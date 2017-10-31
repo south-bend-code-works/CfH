@@ -35,7 +35,7 @@
    var mm = today.getMonth()+1;
    var yyyy = today.getFullYear();
    var min = today.getMinutes();
-   var hrs = today.getHours();
+   var hrs = today.getHours()/12;
    var secs = today.getSeconds();
    var dt = mm + ":" + dd + ":" + yyyy + ":" + hrs + ":" + min + ":" + secs;
    console.log(mm + ":" + dd + ":" + yyyy + ":" + hrs + ":" + min + ":" + secs);
