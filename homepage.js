@@ -24,6 +24,7 @@
    var dob = $('#birth').val();
    var gender = $("input[name='group1']:checked").val();
    var housing = $("input[name='group2']:checked").val();
+   console.log(housing);
    var kids = $('#kids').val();
    var vet = $('#vet').is(":checked");
    var hasId = $('#photoid').is(":checked");
