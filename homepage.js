@@ -64,7 +64,7 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
-    setTimeout(changeLocation(fname,lname), 2000);
+    setTimeout(changeLocation(fname,lname), 3000);
   }
   
 function logOut(){
