@@ -48,7 +48,7 @@ function getData(){
       var mnameHeader = document.createElement("h2");
       mnameHeader.textContent = "Middle Initial";
       applicant.appendChild(mnameHeader);
-      var mnameElement = document.createElement("h4);
+      var mnameElement = document.createElement("h4");
       mnameElement.textContent = mname;
       applicant.appendChild(mnameElement);
       //Last Name
