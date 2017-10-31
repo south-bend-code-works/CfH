@@ -34,9 +34,10 @@
    var dd = today.getDate();
    var mm = today.getMonth()+1;
    var yyyy = today.getFullYear();
-   console.log(mm + ":" + dd + ":" + yyyy);
-   var dt = new Date('YYYY-MM-DDTHH:MM:SSZ');
-   console.log(dt);
+   var min = today.getMinutes();
+   var hrs = today.getHours();
+   var secs = today.getSeconds();
+   console.log(mm + ":" + dd + ":" + yyyy + ":" + hrs + ":" + min + ":" + secs);
     
   var data = {
     fname:fname,
