@@ -28,7 +28,6 @@ function getData(){
     var housing = data.housing;
     var kids = data.kids;
     var policy = data.policy;
-    var single = data.single;
     var vet = data.vet;
     showData();
     
@@ -72,20 +71,13 @@ function getData(){
       var genderElement = document.createElement("h4");
       genderElement.textContent = gender;
       applicant.appendChild(genderElement);
-      //Housing: Single
+      //Housing
       var singleHeader = document.createElement("h2");
       singleHeader.textContent = "Looking for Single Housing";
       applicant.appendChild(singleHeader);
       var singleElement = document.createElement("h4");
-      singleElement.textContent = single;
+      singleElement.textContent = housing;
       applicant.appendChild(singleElement);
-      //Housing: withChildren
-      var withChildrenHeader = document.createElement("h2");
-      withChildrenHeader.textContent = "Looking for Housing with Children";
-      applicant.appendChild(withChildrenHeader);
-      var withChildrenElement = document.createElement("h4");
-      withChildrenElement.textContent = kids;
-      applicant.appendChild(withChildrenElement);
       //Vet
       var vetHeader = document.createElement("h2");
       vetHeader.textContent = "Is a Vet";
