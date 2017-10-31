@@ -120,6 +120,7 @@ function getData(){
       console.log(applicant);
       $(applicant).css("margin-top", "15px");
       $(applicant).css("text-align", "left");
+      $(applicant).css("margin-left", "5px");
       
       var infoDiv = document.getElementById("div");
       infoDiv.appendChild(applicant);
