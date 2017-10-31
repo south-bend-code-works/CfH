@@ -62,7 +62,7 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
-    changeLocation();
+    changeLocation(fname,lname);
   }
   
 function logOut(){
