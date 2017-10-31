@@ -37,6 +37,7 @@
    var min = today.getMinutes();
    var hrs = today.getHours();
    var secs = today.getSeconds();
+   var dt = mm + ":" + dd + ":" + yyyy + ":" + hrs + ":" + min + ":" + secs;
    console.log(mm + ":" + dd + ":" + yyyy + ":" + hrs + ":" + min + ":" + secs);
     
   var data = {
