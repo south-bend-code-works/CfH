@@ -19,6 +19,7 @@ function getData(){
     var data = snapshot.val();
     console.log(data);
     var fname = data.fname;
+    console.log(fname);
     var mname = data.mname;
     var lname = data.lname;
     var dob = data.dob;
