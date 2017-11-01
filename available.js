@@ -15,7 +15,7 @@ function init(){
 
 function getData(){
   var ref = firebase.database().ref("Applicant");
-  ref.on('value', function(snapshot){
+  ref.on('chid_added', function(snapshot){
     var data = snapshot.val();
     console.log(data);
     var fname = data.fname;
