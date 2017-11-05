@@ -13,13 +13,25 @@
   
   function init() {
     firebase.initializeApp(config);
-    $('#firstName').change(function(){
-      var name = $('#firstName').val() + " " + $('#lastName').val();
+    $('#firstName').change(function(h2, div){
+      var name = $('#firstName').val();
+      console.log(name);
       var div = document.createElement("div");
       var h2 = document.createElement("h2");
+      h2.id = "h2";
       h2.textContent = name;
       div.appendChild(h2);
       $(div).css("display", "fixed");
+    });
+    $('#middle').change(function(h2, div){
+      var middle = $('#middle').val();
+      console.log(middle);
+      h2.appendChild(" " + middle);
+    });
+    $('#lastName').change(function(h2, div){
+      var last = $('#lastName').val();
+      console.log(last);
+      h2.appendChild(" " + last);
     });
     $('#submit').on("click", getData);
     $('#logOut').on("click", logOut);
