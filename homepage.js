@@ -13,6 +13,14 @@
   
   function init() {
     firebase.initializeApp(config);
+    $('#firstName').change(function(){
+      var name = $('#firstName').val() + " " + $('#lastName').val();
+      var div = document.createElement("div"):
+      var h2 = document.createElement("h2");
+      h2.textContent = name;
+      div.appendChild(h2);
+      $(div).css("display", "fixed");
+    });
     $('#submit').on("click", getData);
     $('#logOut').on("click", logOut);
   }
