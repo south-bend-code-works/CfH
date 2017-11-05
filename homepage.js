@@ -27,13 +27,13 @@
       var middle = $('#middle').val();
       console.log(middle);
       var h2 = document.getElementById('h2');
-      h2.appendChild(" " + middle);
+      h2.appendChild(middle);
     });
     $('#lastName').change(function(h2, div){
       var last = $('#lastName').val();
       console.log(last);
       var h2 = document.getElementById('h2');
-      h2.appendChild(" " + last);
+      h2.appendChild(last);
     });
     $('#submit').on("click", getData);
     $('#logOut').on("click", logOut);
