@@ -17,6 +17,7 @@
       var name = $('#firstName').val();
       console.log(name);
       var div = document.createElement("div");
+      div.id = "div";
       var h2 = document.createElement("h2");
       h2.id = "h2";
       h2.textContent = name;
