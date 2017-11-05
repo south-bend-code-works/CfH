@@ -19,7 +19,7 @@
       var div = document.createElement("div");
       var h2 = document.createElement("h2");
       h2.id = "h2";
-      h2.textContent = name;
+      h2.appendChild(name);
       div.appendChild(h2);
       $(div).css("display", "fixed");
     });
