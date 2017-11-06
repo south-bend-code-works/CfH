@@ -83,10 +83,9 @@
   var newApplicantKey = firebase.database().ref().child('Applicant').push().key;
   var updates = {};
   updates['/Applicant/' + newApplicantKey] = data;
-  firebase.database().ref().update(updates);
-  console.log(newApplicantKey);
-    console.log("working");
-  }//.then(function(){location.replace("available.html?id=" + newApplicantKey)});
+  firebase.database().ref().update(updates).then(function(){
+    location.replace("available.html?id=" + newApplicantKey);
+  });
   
 function logOut(){
   firebase.auth().signOut();
