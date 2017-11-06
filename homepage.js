@@ -84,7 +84,7 @@
   var updates = {};
   updates['/Applicant/' + newApplicantKey] = data;
   firebase.database().ref().update(updates);
-    
+  console.log(newApplicantKey);
     console.log("working");
   }.then(function(){location.replace("available.html?id=" + newApplicantKey)});
   
