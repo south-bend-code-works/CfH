@@ -86,8 +86,7 @@
   firebase.database().ref().update(updates);
     
     console.log("working");
-    setTimeout(function changeLocation(fname,lname){location.replace("available.html?id=" + fname + "-" + lname);}, 3000);
-  }
+  }.then(function(){location.replace("available.html?id=" + newApplicantKey);});
   
 function logOut(){
   firebase.auth().signOut();
