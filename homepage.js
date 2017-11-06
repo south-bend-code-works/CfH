@@ -86,7 +86,7 @@
   firebase.database().ref().update(updates).then(function(){
     location.replace("available.html?id=" + newApplicantKey);
   });
-  
+  }
 function logOut(){
   firebase.auth().signOut();
   location.replace("adminLogin.html");
