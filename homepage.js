@@ -13,29 +13,29 @@
   
   function init() {
     firebase.initializeApp(config);
-    $('#firstName').change(function(h2, div){
-      var name = $('#firstName').val();
-      console.log(name);
-      var div = document.createElement("div");
-      div.id = "div";
-      var h2 = document.createElement("h2");
-      h2.id = "h2";
-      h2.textContent = name;
-      div.appendChild(h2);
-      $(div).css("display", "fixed");
-    });
-    $('#middle').change(function(h2, div){
-      var middle = $('#middle').val();
-      console.log(middle);
-      var h2 = document.getElementById('h2');
-      h2.textContent = middle;
-    });
-    $('#lastName').change(function(h2, div){
-      var last = $('#lastName').val();
-      console.log(last);
-      var h2 = document.getElementById('h2');
-      h2.textContent = last;
-    });
+    //$('#firstName').change(function(h2, div){
+      //var name = $('#firstName').val();
+      //console.log(name);
+      //var div = document.createElement("div");
+      //div.id = "div";
+      //var h2 = document.createElement("h2");
+      //h2.id = "h2";
+      //h2.textContent = name;
+      //div.appendChild(h2);
+      //$(div).css("display", "fixed");
+    //});
+    //$('#middle').change(function(h2, div){
+      //var middle = $('#middle').val();
+      //console.log(middle);
+      //var h2 = document.getElementById('h2');
+      //h2.textContent = middle;
+    //});
+    //$('#lastName').change(function(h2, div){
+      //var last = $('#lastName').val();
+      //console.log(last);
+      //var h2 = document.getElementById('h2');
+      //h2.textContent = last;
+    //});
     $('#submit').on("click", getData);
     $('#logOut').on("click", logOut);
   }
