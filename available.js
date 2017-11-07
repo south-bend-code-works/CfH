@@ -12,8 +12,7 @@ function init(){
   firebase.initializeApp(config);
   console.log(window.location.href);
   var key = window.location.href;
-  var key = String(key);
-  key = key.slice("=");
+  key = key.split("=");
   console.log(key);
   getData();
 }
