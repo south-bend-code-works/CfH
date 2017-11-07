@@ -14,6 +14,7 @@ function init(){
   var key = window.location.href;
   key = key.split("=");
   tmpKey = key[1];
+  console.log(tmpKey);
   getData(tmpKey);
 }
 
