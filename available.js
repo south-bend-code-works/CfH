@@ -13,7 +13,7 @@ function init(){
   console.log(window.location.href);
   var key = window.location.href;
   var key = String(key);
-  key = key.slice("=")[0];
+  key = key.slice("=")[50];
   console.log(key);
   getData();
 }
