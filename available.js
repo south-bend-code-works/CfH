@@ -13,12 +13,12 @@ function init(){
   console.log(window.location.href);
   var key = window.location.href;
   key = key.split("=");
-  console.log(key);
-  getData();
+  tmpKey = key[1];
+  getData(tmpKey);
 }
 
-function getData(){
-  var ref = firebase.database().ref("Applicant");
+function getData(tmpKey){
+  var ref = firebase.database().ref("Applicant").child(tmpKey);
   ref.on('child_added', function(snapshot){
     var data = snapshot.val();
     console.log(data);
