@@ -10,6 +10,7 @@
   };
 function init(){
   firebase.initializeApp(config);
+  console.log(window.location.pathname);
   getData();
 }
 
