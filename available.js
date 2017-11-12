@@ -20,7 +20,7 @@ function init(){
 
 function getData(tmpKey){
   var ref = firebase.database().ref("Applicant").child(tmpKey);
-  ref.on('child_added', function(snapshot){
+  ref.on('value', function(snapshot){
     var data = snapshot.val();
     console.log(data);
     var fname = data.fname;
