@@ -23,7 +23,7 @@
       h2.textContent = name;
       div.appendChild(h2);
       $(div).css("display", "fixed");
-    //});
+    });
     //$('#middle').change(function(h2, div){
       //var middle = $('#middle').val();
       //console.log(middle);
