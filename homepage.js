@@ -22,6 +22,7 @@
       h2.id = "h2";
       h2.textContent = name;
       div.appendChild(h2);
+      body.appendChild(div);
       $(div).css("display", "fixed");
     });
     //$('#middle').change(function(h2, div){
