@@ -61,6 +61,7 @@ function getBedStatus(){
 
   // Family 1
   firebase.database().ref().child("Room/Family_1").on('value', function(snapshot){
+    $('#fam_1').empty();
     var room = snapshot.val();
 
     for(var r in room){
@@ -76,6 +77,7 @@ function getBedStatus(){
 
   // Family 2
   firebase.database().ref().child("Room/Family_2").on('value', function(snapshot){
+    $('#fam_2').empty();
     var room = snapshot.val();
 
     for(var r in room){
@@ -91,6 +93,7 @@ function getBedStatus(){
 
   // Family 3
   firebase.database().ref().child("Room/Family_3").on('value', function(snapshot){
+    $('#fam_3').empty();
     var room = snapshot.val();
 
     for(var r in room){
@@ -106,6 +109,7 @@ function getBedStatus(){
 
   // Family 4
   firebase.database().ref().child("Room/Family_4").on('value', function(snapshot){
+    $('#fam_4').empty();
     var room = snapshot.val();
 
     for(var r in room){
