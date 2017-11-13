@@ -15,6 +15,10 @@ function init() {
   firebase.initializeApp(config);
   $("#women").on('click', '.bed',initChangeColorWomen);
   $("#men").on('click', '.bed',initChangeColorMen);
+  $("#fam_1").on('click', '.bed',initChangeColorFamilyOne);
+  $("#fam_2").on('click', '.bed',initChangeColorFamilyTwo);
+  $("#fam_3").on('click', '.bed',initChangeColorFamilyThree);
+  $("#fam_4").on('click', '.bed',initChangeColorFamilyFour);
 
   getBedStatus();
 }
