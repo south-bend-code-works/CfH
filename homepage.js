@@ -13,16 +13,16 @@
   
   function init() {
     firebase.initializeApp(config);
-    //$('#firstName').change(function(h2, div){
-      //var name = $('#firstName').val();
-      //console.log(name);
-      //var div = document.createElement("div");
-      //div.id = "div";
-      //var h2 = document.createElement("h2");
-      //h2.id = "h2";
-      //h2.textContent = name;
-      //div.appendChild(h2);
-      //$(div).css("display", "fixed");
+    $('#firstName').change(function(h2, div){
+      var name = $('#firstName').val();
+      console.log(name);
+      var div = document.createElement("div");
+      div.id = "div";
+      var h2 = document.createElement("h2");
+      h2.id = "h2";
+      h2.textContent = name;
+      div.appendChild(h2);
+      $(div).css("display", "fixed");
     //});
     //$('#middle').change(function(h2, div){
       //var middle = $('#middle').val();
