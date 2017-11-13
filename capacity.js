@@ -13,8 +13,8 @@
 
 function init() {
   firebase.initializeApp(config);
-  $("#women").on('click', '.bed',initChangeColor);
-  $("#men").on('click', '.bed',initChangeColor);
+  $("#women").on('click', '.bed',initChangeColorWomen);
+  $("#men").on('click', '.bed',initChangeColorMen);
 
   getBedStatus();
 }
@@ -119,7 +119,7 @@ function getBedStatus(){
 // end of function getBedStatus
 
 
-function initChangeColor(){
+function initChangeColorWomen(){
   var temp = $(this).text();
   firebase.database().ref().child("Room/Women/" + temp).once('value', function(snapshot){
     var state = snapshot.val().available;
@@ -139,7 +139,7 @@ function initChangeColor(){
 }
 // close to initChangeColor
 
-function ChangeColor(){
+function initChangeColorMen(){
   var temp = $(this).text();
   firebase.database().ref().child("Room/Men/" + temp).once('value', function(snapshot){
     var state = snapshot.val().available;
@@ -153,6 +153,87 @@ function ChangeColor(){
         available: false
       }
       return firebase.database().ref("Room/Men/"+temp).update(newState);
+    }
+  });
+
+}
+// close to initChangeColor
+  
+function initChangeColorFamilyOne(){
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Family_1/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Family_1/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Family_1/"+temp).update(newState);
+    }
+  });
+
+}
+// close to initChangeColor
+  
+
+function initChangeColorFamilyTwo(){
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Family_2/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Family_2/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Family_2/"+temp).update(newState);
+    }
+  });
+
+}
+// close to initChangeColor
+  
+function initChangeColorFamilyThree(){
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Family_3/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Family_3/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Family_3/"+temp).update(newState);
+    }
+  });
+
+}
+// close to initChangeColor
+  
+function initChangeColorFamilyFour(){
+  var temp = $(this).text();
+  firebase.database().ref().child("Room/Family_4/" + temp).once('value', function(snapshot){
+    var state = snapshot.val().available;
+    if(state === false) {
+      var newState = {
+        available: true
+      }
+      return firebase.database().ref("Room/Family_4/"+temp).update(newState);
+    } else {
+      var newState = {
+        available: false
+      }
+      return firebase.database().ref("Room/Family_4/"+temp).update(newState);
     }
   });
 
