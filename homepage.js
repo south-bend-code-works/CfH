@@ -22,8 +22,9 @@
       h2.id = "h2";
       h2.textContent = name;
       div.appendChild(h2);
-      $('body').append(div);
+      $('body').prepend(div);
       $(div).css("display", "fixed");
+      $(div).css("text-align", "right");
     });
     //$('#middle').change(function(h2, div){
       //var middle = $('#middle').val();
