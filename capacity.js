@@ -14,7 +14,7 @@
 function init() {
   firebase.initializeApp(config);
   $("#women").on('click', '.bed',initChangeColor);
-  $("#men").on('click', '.bed',ChangeColor);
+  $("#men").on('click', '.bed',initChangeColor);
 
   getBedStatus();
 }
@@ -40,7 +40,9 @@ function getBedStatus(){
 
   // Mens
   firebase.database().ref().child("Room/Men").on('value', function(snapshot){
+    $('#men').empty();
     var room = snapshot.val();
+    
 
     for(var r in room){
       var roomAvail = room[r];
