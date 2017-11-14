@@ -27,6 +27,7 @@
       $(div).css("padding-bottom", "20px");
       $(div).css("text-align", "right");
       $(h2).css("background-color", "white");
+      $(h2).css("padding-left", "5px");
       $(h2).css("color", "black");
     });
     //$('#middle').change(function(h2, div){
