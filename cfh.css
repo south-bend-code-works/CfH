@@ -8,9 +8,9 @@ body {
 
 
 .bed {
-/*   border: #032584;
+  border: black;
   border-style: solid;
-  border-width: thin; */
+  border-width: thin;
   font-size: 20pt;
   background-color: transparent;
 }
