@@ -24,7 +24,9 @@
       div.appendChild(h2);
       $('body').prepend(div);
       $(div).css("position", "fixed");
+      $(div).css("padding-bottom", "20px");
       $(div).css("text-align", "right");
+      $(h2).css("background-color", "
     });
     //$('#middle').change(function(h2, div){
       //var middle = $('#middle').val();
