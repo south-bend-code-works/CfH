@@ -23,7 +23,7 @@
       h2.textContent = name;
       div.appendChild(h2);
       $('body').prepend(div);
-      $(div).css("display", "fixed");
+      $(div).css("position", "fixed");
       $(div).css("text-align", "right");
     });
     //$('#middle').change(function(h2, div){
