@@ -26,9 +26,9 @@
       $(div).css("position", "fixed");
       $(div).css("padding-bottom", "20px");
       $(div).css("text-align", "right");
-      $(h2).css("background-color", "white");
+      $(h2).css("background-color", "teal");
       $(h2).css("padding-left", "5px");
-      $(h2).css("color", "black");
+      $(h2).css("color", "white");
     });
     //$('#middle').change(function(h2, div){
       //var middle = $('#middle').val();
