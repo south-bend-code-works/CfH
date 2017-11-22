@@ -19,6 +19,7 @@ body {
   border-width: thin;
   font-size: 20pt;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .s6 {
