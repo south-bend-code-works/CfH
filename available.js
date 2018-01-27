@@ -105,6 +105,7 @@ function getData(tmpKey){
       var policyElement = document.createElement("h4");
       if(policy === false){
          $(policyElement).css("color", "red");
+         $(policyElement).css("text-transform", "uppercase");
       }
       policyElement.textContent = policy;
       applicant.appendChild(policyElement);
