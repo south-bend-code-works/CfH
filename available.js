@@ -103,7 +103,7 @@ function getData(tmpKey){
       policyHeader.textContent = "Willing to abide by the Drug and alchohol policy of the Center fo the Homeless";
       applicant.appendChild(policyHeader);
       var policyElement = document.createElement("h4");
-      if(policy === "false"){
+      if(policy === false){
          $(policyElement).css("color", "red");
       }
       policyElement.textContent = policy;
