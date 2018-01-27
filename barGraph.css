@@ -1,0 +1,19 @@
+div{
+    /* width: 100%; */
+    display: inline-block;
+    /* margin: 40px; */
+}
+
+#graph{
+    /* margin-top: 5px;
+    margin-left: 20px; */
+}
+
+body{
+    background-color: #2b7a78;
+    color: #ffffff;
+}
+
+canvas{
+    background-color: rgba(128,128,128,0.5)
+}

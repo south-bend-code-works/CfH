@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="barGraph.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="barGraph.js"></script>
+</head>
+<body>
+    <div>
+        <h1><u>Applicantion Data</u></h1>
+        <div class="center-align col s12" id="graph">
+            <h1>Total Amount of Applications</h1>
+            <h1 class="year"></h1>
+            <div class="row">
+                <div class="col s2">
+                    <h1 class="jan"></h1>
+                    <canvas id="jan" width="50px" height="200px"></canvas>
+                    <h1>Jan</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="feb"></h1>
+                    <canvas id="feb" width="50px" height="200px"></canvas>
+                    <h1>Feb</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="mar"></h1>
+                    <canvas id="mar" width="50px" height="200px"></canvas>
+                    <h1>Mar</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="apr"></h1>
+                    <canvas id="apr" width="50px" height="200px"></canvas>
+                    <h1>Apr</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="may"></h1>
+                    <canvas id="may" width="50px" height="200px"></canvas>
+                    <h1>May</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="jun"></h1>
+                    <canvas id="jun" width="50px" height="200px"></canvas>
+                    <h1>Jun</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s2">
+                    <h1 class="jul"></h1>
+                    <canvas id="jul" width="50px" height="200px"></canvas>
+                    <h1>Jul</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="aug"></h1>
+                    <canvas id="aug" width="50px" height="200px"></canvas>
+                    <h1>Aug</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="sept"></h1>
+                    <canvas id="sept" width="50px" height="200px"></canvas>
+                    <h1>Sep</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="oct"></h1>
+                    <canvas id="oct" width="50px" height="200px"></canvas>
+                    <h1>Oct</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="nov"></h1>
+                    <canvas id="nov" width="50px" height="200px"></canvas>
+                    <h1>Nov</h1>
+                </div>
+                <div class="col s2">
+                    <h1 class="dec"></h1>
+                    <canvas id="dec" width="50px" height="200px"></canvas>
+                    <h1>Dec</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
